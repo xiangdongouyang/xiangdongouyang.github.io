@@ -13,9 +13,44 @@ body{background:#f7f8fa;color:#222;line-height:1.7}
 .nav-links{display:flex;gap:20px}
 .nav-links a{color:white;text-decoration:none;font-size:14px}
 .nav-links a:hover{color:#ff6b00}
-.hero{background:#0a4978;color:white;padding:60px 0;text-align:center}
-.hero h1{font-size:32px;margin-bottom:10px}
-.hero p{font-size:18px;opacity:0.9}
+
+/* 新增：全屏首屏大图样式，对标best-prototype.com */
+.hero {
+  background: linear-gradient(rgba(10, 73, 120, 0.8), rgba(10, 73, 120, 0.8)), 
+              url("https://images.unsplash.com/photo-1565173045725-1a8578f1761b?w=1920&q=80");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  max-width: 800px;
+}
+.cta-btn {
+  background: #ff6b00;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.cta-btn:hover {
+  background: #e05a00;
+}
+
 .wrap{max-width:1000px;margin:0 auto;padding:30px 20px}
 .section{background:white;border-radius:8px;padding:28px;margin-bottom:24px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
 h2{color:#0a4978;font-size:22px;margin-bottom:16px;border-left:4px solid#ff6b00;padding-left:12px}
@@ -51,9 +86,11 @@ li{margin-bottom:6px}
   </div>
 </div>
 
+<!-- 新增：全屏首屏大图区域 -->
 <div class="hero">
   <h1>Engineering-Driven Precision Manufacturing</h1>
-  <p>From Prototype to Mass Production | One-Stop Solution</p>
+  <p>From Prototype to Mass Production | One-Stop Solution for CNC Machining, Friction Welding & More</p>
+  <a href="contact.html" class="cta-btn">Request a Quote</a>
 </div>
 
 <div class="wrap">
