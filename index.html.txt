@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>X.d Prototype Fabrication | Precision Manufacturing</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Roboto,sans-serif}
+body{background:#f7f8fa;color:#222;line-height:1.7}
+.navbar{background:#0a4978;color:white;padding:15px 0;position:sticky;top:0;z-index:100}
+.nav-wrap{max-width:1000px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:20px;font-weight:bold}
+.nav-links{display:flex;gap:20px}
+.nav-links a{color:white;text-decoration:none;font-size:14px}
+.nav-links a:hover{color:#ff6b00}
+.hero{background:#0a4978;color:white;padding:60px 0;text-align:center}
+.hero h1{font-size:32px;margin-bottom:10px}
+.hero p{font-size:18px;opacity:0.9}
+.wrap{max-width:1000px;margin:0 auto;padding:30px 20px}
+.section{background:white;border-radius:8px;padding:28px;margin-bottom:24px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+h2{color:#0a4978;font-size:22px;margin-bottom:16px;border-left:4px solid#ff6b00;padding-left:12px}
+h3{color:#0a4978;font-size:18px;margin:18px 0 10px}
+p{margin-bottom:12px;color:#333}
+ul{padding-left:20px;margin-bottom:12px}
+li{margin-bottom:6px}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;margin-top:20px}
+.card{background:white;border-radius:8px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+.card h3{margin-top:0}
+.card a{display:inline-block;margin-top:10px;color:#0a4978;text-decoration:none;font-weight:bold}
+.card a:hover{color:#ff6b00}
+.contact{background:#0a4978;color:white;text-align:center;padding:30px 20px;border-radius:8px;margin-top:20px}
+.contact h2{color:white;border-left:none;padding-left:0}
+.contact a{color:#ff6b00;font-weight:bold;font-size:16px}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <div class="nav-wrap">
+    <div class="logo">X.d Prototype Fabrication</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="cnc-machining.html">CNC Machining</a>
+      <a href="friction-welding.html">Friction Welding</a>
+      <a href="airtight-test.html">Airtight Test</a>
+      <a href="sheet-metal.html">Sheet Metal</a>
+      <a href="die-casting.html">Die Casting</a>
+      <a href="injection-molding.html">Injection Molding</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</div>
+
+<div class="hero">
+  <h1>Engineering-Driven Precision Manufacturing</h1>
+  <p>From Prototype to Mass Production | One-Stop Solution</p>
+</div>
+
+<div class="wrap">
+
+<div class="section">
+  <h2>About Us</h2>
+  <p>X.d Prototype Fabrication is a professional precision manufacturing service provider focused on high-quality prototypes and small-batch production for global clients. We specialize in aluminum CNC machining, friction welding, air tightness testing, and sheet metal fabrication.</p>
+  <p>With in-depth mechanical design and machining experience, we understand engineering drawings, process requirements, and real industry pain points. We provide DFM optimization, quality control, and reliable solutions for thin-wall deformation, thread fitting, air leakage, and sheet metal springback.</p>
+</div>
+
+<div class="section">
+  <h2>Our Core Capabilities</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>CNC Machining</h3>
+      <p>High-precision CNC milling & turning for aluminum alloys (6061, 5052, 7075). Specialized in thin-wall components and complex structural parts.</p>
+      <a href="cnc-machining.html">Learn More →</a>
+    </div>
+    <div class="card">
+      <h3>Friction Welding</h3>
+      <p>High-strength, airtight, and clean welding for aluminum & metal assemblies. No porosity, ideal for pressure & fluid components.</p>
+      <a href="friction-welding.html">Learn More →</a>
+    </div>
+    <div class="card">
+      <h3>Airtight Testing</h3>
+      <p>100% air tightness inspection for critical components. Pressure decay / differential pressure test to ensure zero leakage.</p>
+      <a href="airtight-test.html">Learn More →</a>
+    </div>
+    <div class="card">
+      <h3>Sheet Metal</h3>
+      <p>Bending, laser cutting, stamping, and forming for aluminum and steel parts. Springback compensation ensures high accuracy.</p>
+      <a href="sheet-metal.html">Learn More →</a>
+    </div>
+    <div class="card">
+      <h3>Die Casting</h3>
+      <p>High-efficiency mass production for complex aluminum parts. Low cost, high precision, stable dimension.</p>
+      <a href="die-casting.html">Learn More →</a>
+    </div>
+    <div class="card">
+      <h3>Injection Molding</h3>
+      <p>Rapid & production molding for plastic parts. Suitable for 50–100,000+ pieces with various materials.</p>
+      <a href="injection-molding.html">Learn More →</a>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Why Choose Us</h2>
+  <ul>
+    <li>Professional DFM analysis before production</li>
+    <li>Strict quality control & full inspection</li>
+    <li>One-stop service: machining, welding, casting, molding, finishing, testing</li>
+    <li>Single point contact project manager</li>
+    <li>Fast quote & on-time delivery</li>
+    <li>PPAP, inspection report & material certification</li>
+  </ul>
+</div>
+
+<div class="contact">
+  <h2>Request a Quote</h2>
+  <p style="margin-bottom:10px">Send 2D / 3D drawings (STEP, DWG, PDF) to get professional DFM & quotation.</p>
+  <p>Email: <a href="mailto:xiangdongouyang001@gmail.com">xiangdongouyang001@gmail.com</a></p>
+  <p style="margin-top:10px;font-size:14px">We reply within 24 hours.</p>
+</div>
+
+</div>
+</body>
+</html>
