@@ -5,22 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>X.d Prototype Fabrication | Precision Manufacturing</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Roboto,sans-serif}
-body{background:#f7f8fa;color:#222;line-height:1.7}
-.navbar{background:#0a4978;color:white;padding:15px 0;position:sticky;top:0;z-index:100}
-.nav-wrap{max-width:1000px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:20px;font-weight:bold}
-.nav-links{display:flex;gap:20px}
-.nav-links a{color:white;text-decoration:none;font-size:14px}
+/* 全局更换高端专业字体（解决字体难看问题） */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',system-ui,Segoe UI,Roboto,sans-serif}
+body{background:#f7f8fa;color:#222;line-height:1.8}
+
+/* 导航栏优化 */
+.navbar{background:#0a4978;color:white;padding:18px 0;position:sticky;top:0;z-index:100}
+.nav-wrap{max-width:1100px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:22px;font-weight:600}
+.nav-links{display:flex;gap:24px}
+.nav-links a{color:white;text-decoration:none;font-size:15px;font-weight:500}
 .nav-links a:hover{color:#ff6b00}
 
-/* 这里已经换成你的 Factory.png 作为背景图 */
+/* 🔥 核心修复：背景大图全屏完整显示（不裁切、铺满屏幕） */
 .hero {
   background: linear-gradient(rgba(10,73,120,0.75),rgba(10,73,120,0.75)),
   url("https://raw.githubusercontent.com/xiangdongouyang/xiangdongouyang.github.io/main/Factory.png");
-  background-size:cover;
-  background-position:center top;
-  height:75vh;
+  background-size: cover;    /* 全屏覆盖 */
+  background-position: center; /* 居中显示 */
+  background-repeat: no-repeat; /* 不重复 */
+  height: 85vh; /* 高度适配全屏 */
+  min-height: 600px;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -30,41 +35,56 @@ body{background:#f7f8fa;color:#222;line-height:1.7}
   padding:0 20px;
 }
 .hero h1 {
-  font-size:42px;
-  margin-bottom:15px;
+  font-size:46px;
+  font-weight:700;
+  margin-bottom:20px;
+  letter-spacing:0.5px;
 }
 .hero p {
-  font-size:20px;
-  margin-bottom:30px;
-  max-width:800px;
+  font-size:22px;
+  margin-bottom:35px;
+  max-width:850px;
+  font-weight:400;
 }
 .cta-btn {
   background:#ff6b00;
   color:white;
-  padding:12px 30px;
-  border-radius:4px;
+  padding:14px 36px;
+  border-radius:6px;
   text-decoration:none;
-  font-weight:bold;
+  font-weight:600;
+  font-size:16px;
+  transition:0.3s;
 }
 .cta-btn:hover{background:#e05a00}
 
-.wrap{max-width:1000px;margin:0 auto;padding:30px 20px}
-.section{background:white;border-radius:8px;padding:28px;margin-bottom:24px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
-h2{color:#0a4978;font-size:22px;margin-bottom:16px;border-left:4px solid #ff6b00;padding-left:12px}
-h3{color:#0a4978;font-size:18px;margin:18px 0 10px}
-p{margin-bottom:12px;color:#333}
-ul{padding-left:20px;margin-bottom:12px}
-li{margin-bottom:6px}
+/* 页面布局优化 */
+.wrap{max-width:1100px;margin:0 auto;padding:40px 20px}
+.section{background:white;border-radius:10px;padding:35px;margin-bottom:30px;box-shadow:0 3px 12px rgba(0,0,0,0.05)}
+h2{color:#0a4978;font-size:26px;font-weight:600;margin-bottom:20px;border-left:4px solid #ff6b00;padding-left:14px}
+h3{color:#0a4978;font-size:20px;font-weight:600;margin:20px 0 12px}
+p{margin-bottom:15px;color:#333;font-size:16px}
+ul{padding-left:22px;margin-bottom:15px}
+li{margin-bottom:8px;font-size:16px}
 
-.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;margin-top:20px}
-.card{background:white;border-radius:8px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
-.card img{width:100%;height:160px;object-fit:cover;border-radius:6px;margin-bottom:12px}
+/* 卡片图片优化：完整显示、不变形 */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:24px;margin-top:25px}
+.card{background:white;border-radius:10px;padding:24px;box-shadow:0 3px 12px rgba(0,0,0,0.05)}
+.card img{
+  width:100%;
+  height:180px;
+  object-fit: contain;  /* 🔥 图片完整显示，不裁切 */
+  border-radius:8px;
+  margin-bottom:16px;
+  background:#f5f5f5;
+}
 .card h3{margin-top:0}
-.card a{display:inline-block;margin-top:10px;color:#0a4978;font-weight:bold}
+.card a{display:inline-block;margin-top:12px;color:#0a4978;font-weight:600}
 
-.contact{background:#0a4978;color:white;text-align:center;padding:30px 20px;border-radius:8px;margin-top:20px}
-.contact h2{color:white;border-left:none}
-.contact a{color:#ff6b00;font-weight:bold;font-size:16px}
+/* 联系栏优化 */
+.contact{background:#0a4978;color:white;text-align:center;padding:40px 20px;border-radius:10px;margin-top:25px}
+.contact h2{color:white;border:none;padding-left:0}
+.contact a{color:#ff6b00;font-weight:600;font-size:17px}
 </style>
 </head>
 
