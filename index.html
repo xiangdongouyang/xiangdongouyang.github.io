@@ -5,26 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>X.d Prototype Fabrication | Precision Manufacturing</title>
 <style>
-/* 全局更换高端专业字体（解决字体难看问题） */
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',system-ui,Segoe UI,Roboto,sans-serif}
 body{background:#f7f8fa;color:#222;line-height:1.8}
 
-/* 导航栏优化 */
-.navbar{background:#0a4978;color:white;padding:18px 0;position:sticky;top:0;z-index:100}
+/* 🔥 导航栏改为白色主题 */
+.navbar{background:#ffffff;color:#0a4978;padding:18px 0;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
 .nav-wrap{max-width:1100px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:22px;font-weight:600}
+.logo{font-size:22px;font-weight:700;color:#0a4978}
 .nav-links{display:flex;gap:24px}
-.nav-links a{color:white;text-decoration:none;font-size:15px;font-weight:500}
+.nav-links a{color:#0a4978;text-decoration:none;font-size:15px;font-weight:500}
 .nav-links a:hover{color:#ff6b00}
 
-/* 🔥 核心修复：背景大图全屏完整显示（不裁切、铺满屏幕） */
 .hero {
   background: linear-gradient(rgba(10,73,120,0.75),rgba(10,73,120,0.75)),
   url("https://raw.githubusercontent.com/xiangdongouyang/xiangdongouyang.github.io/main/Factory.png");
-  background-size: cover;    /* 全屏覆盖 */
-  background-position: center; /* 居中显示 */
-  background-repeat: no-repeat; /* 不重复 */
-  height: 85vh; /* 高度适配全屏 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 85vh;
   min-height: 600px;
   display:flex;
   flex-direction:column;
@@ -58,7 +56,6 @@ body{background:#f7f8fa;color:#222;line-height:1.8}
 }
 .cta-btn:hover{background:#e05a00}
 
-/* 页面布局优化 */
 .wrap{max-width:1100px;margin:0 auto;padding:40px 20px}
 .section{background:white;border-radius:10px;padding:35px;margin-bottom:30px;box-shadow:0 3px 12px rgba(0,0,0,0.05)}
 h2{color:#0a4978;font-size:26px;font-weight:600;margin-bottom:20px;border-left:4px solid #ff6b00;padding-left:14px}
@@ -67,13 +64,12 @@ p{margin-bottom:15px;color:#333;font-size:16px}
 ul{padding-left:22px;margin-bottom:15px}
 li{margin-bottom:8px;font-size:16px}
 
-/* 卡片图片优化：完整显示、不变形 */
 .card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:24px;margin-top:25px}
 .card{background:white;border-radius:10px;padding:24px;box-shadow:0 3px 12px rgba(0,0,0,0.05)}
 .card img{
   width:100%;
   height:180px;
-  object-fit: contain;  /* 🔥 图片完整显示，不裁切 */
+  object-fit: contain;
   border-radius:8px;
   margin-bottom:16px;
   background:#f5f5f5;
@@ -81,7 +77,6 @@ li{margin-bottom:8px;font-size:16px}
 .card h3{margin-top:0}
 .card a{display:inline-block;margin-top:12px;color:#0a4978;font-weight:600}
 
-/* 联系栏优化 */
 .contact{background:#0a4978;color:white;text-align:center;padding:40px 20px;border-radius:10px;margin-top:25px}
 .contact h2{color:white;border:none;padding-left:0}
 .contact a{color:#ff6b00;font-weight:600;font-size:17px}
