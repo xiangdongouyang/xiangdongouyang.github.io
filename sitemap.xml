@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- 首页 -->
+  <url>
+    <loc>https://xdprototypefabrication.com/</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- CNC加工页面 -->
+  <url>
+    <loc>https://xdprototypefabrication.com/cnc-machining.html</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- 摩擦焊页面 -->
+  <url>
+    <loc>https://xdprototypefabrication.com/friction-welding.html</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- 气密性测试页面 -->
+  <url>
+    <loc>https://xdprototypefabrication.com/airtight-test.html</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- 钣金页面 -->
+  <url>
+    <loc>https://xdprototypefabrication.com/sheet-metal.html</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- 压铸页面 -->
+  <url>
+    <loc>https://xdprototypefabrication.com/die-casting.html</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- 注塑页面 -->
+  <url>
+    <loc>https://xdprototypefabrication.com/injection-molding.html</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- 联系我们页面 -->
+  <url>
+    <loc>https://xdprototypefabrication.com/contact.html</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>
