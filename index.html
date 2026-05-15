@@ -8,7 +8,7 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',system-ui,Segoe UI,Roboto,sans-serif}
 body{background:#f7f8fa;color:#222;line-height:1.8}
 
-/* 🔥 导航栏改为白色主题 */
+/* 导航栏白色主题 */
 .navbar{background:#ffffff;color:#0a4978;padding:18px 0;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
 .nav-wrap{max-width:1100px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
 .logo{font-size:22px;font-weight:700;color:#0a4978}
@@ -16,9 +16,9 @@ body{background:#f7f8fa;color:#222;line-height:1.8}
 .nav-links a{color:#0a4978;text-decoration:none;font-size:15px;font-weight:500}
 .nav-links a:hover{color:#ff6b00}
 
+/* 🔥 核心修改1：完全去掉大图蓝色遮挡，显示原图 */
 .hero {
-  background: linear-gradient(rgba(10,73,120,0.75),rgba(10,73,120,0.75)),
-  url("https://raw.githubusercontent.com/xiangdongouyang/xiangdongouyang.github.io/main/Factory.png");
+  background: url("https://raw.githubusercontent.com/xiangdongouyang/xiangdongouyang.github.io/main/Factory.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -31,18 +31,36 @@ body{background:#f7f8fa;color:#222;line-height:1.8}
   color:white;
   text-align:center;
   padding:0 20px;
+  /* 加一层极淡的黑色蒙版，保证文字清晰可见 */
+  position: relative;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3); /* 极淡黑色，不影响原图色彩 */
+  z-index: 0;
+}
+.hero h1, .hero p, .hero .cta-btn {
+  position: relative;
+  z-index: 1;
 }
 .hero h1 {
   font-size:46px;
   font-weight:700;
   margin-bottom:20px;
   letter-spacing:0.5px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 .hero p {
   font-size:22px;
   margin-bottom:35px;
   max-width:850px;
   font-weight:400;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 .cta-btn {
   background:#ff6b00;
@@ -56,6 +74,7 @@ body{background:#f7f8fa;color:#222;line-height:1.8}
 }
 .cta-btn:hover{background:#e05a00}
 
+/* 页面布局 */
 .wrap{max-width:1100px;margin:0 auto;padding:40px 20px}
 .section{background:white;border-radius:10px;padding:35px;margin-bottom:30px;box-shadow:0 3px 12px rgba(0,0,0,0.05)}
 h2{color:#0a4978;font-size:26px;font-weight:600;margin-bottom:20px;border-left:4px solid #ff6b00;padding-left:14px}
@@ -64,6 +83,7 @@ p{margin-bottom:15px;color:#333;font-size:16px}
 ul{padding-left:22px;margin-bottom:15px}
 li{margin-bottom:8px;font-size:16px}
 
+/* 卡片样式 */
 .card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:24px;margin-top:25px}
 .card{background:white;border-radius:10px;padding:24px;box-shadow:0 3px 12px rgba(0,0,0,0.05)}
 .card img{
@@ -77,9 +97,26 @@ li{margin-bottom:8px;font-size:16px}
 .card h3{margin-top:0}
 .card a{display:inline-block;margin-top:12px;color:#0a4978;font-weight:600}
 
-.contact{background:#0a4978;color:white;text-align:center;padding:40px 20px;border-radius:10px;margin-top:25px}
-.contact h2{color:white;border:none;padding-left:0}
-.contact a{color:#ff6b00;font-weight:600;font-size:17px}
+/* 🔥 核心修改2：底部Request区域背景改成白色 */
+.contact{
+  background:#ffffff; /* 白色背景 */
+  color:#222; /* 深色文字 */
+  text-align:center;
+  padding:40px 20px;
+  border-radius:10px;
+  margin-top:25px;
+  box-shadow:0 3px 12px rgba(0,0,0,0.05); /* 和其他section保持一致的阴影 */
+}
+.contact h2{
+  color:#0a4978; /* 深蓝色标题 */
+  border:none;
+  padding-left:0;
+}
+.contact a{
+  color:#ff6b00; /* 橙色链接保持不变 */
+  font-weight:600;
+  font-size:17px;
+}
 </style>
 </head>
 
