@@ -3,52 +3,122 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CNC Machining | X.d Prototype Fabrication</title>
+<title>X.d Prototype Fabrication | Precision Manufacturing</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',system-ui,Segoe UI,Roboto,sans-serif}
-body{background:#f7f8fa;color:#222;line-height:1.7}
-.navbar{background:#ffffff;color:#0a4978;padding:15px 0;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
-.nav-wrap{max-width:1000px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:20px;font-weight:700;color:#0a4978}
-.nav-links{display:flex;gap:20px}
-.nav-links a{color:#0a4978;text-decoration:none;font-size:14px;font-weight:500}
+body{background:#f7f8fa;color:#222;line-height:1.8}
+
+/* 导航栏白色主题（和分页面完全统一） */
+.navbar{background:#ffffff;color:#0a4978;padding:18px 0;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
+.nav-wrap{max-width:1100px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:22px;font-weight:700;color:#0a4978}
+.nav-links{display:flex;gap:24px}
+.nav-links a{color:#0a4978;text-decoration:none;font-size:15px;font-weight:500}
 .nav-links a:hover{color:#ff6b00}
-.wrap{max-width:1000px;margin:0 auto;padding:30px 20px}
-.section{background:white;border-radius:8px;padding:28px;margin-bottom:24px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
-h2{color:#0a4978;font-size:22px;font-weight:600;margin-bottom:16px;border-left:4px solid #ff6b00;padding-left:12px}
-h3{color:#0a4978;font-size:18px;font-weight:600;margin:18px 0 10px}
-p{margin-bottom:12px;color:#333}
-ul{padding-left:20px;margin-bottom:12px}
-li{margin-bottom:6px}
-.table{width:100%;border-collapse:collapse;margin:16px 0}
-.table th,.table td{border:1px solid #ddd;padding:10px;text-align:left;font-size:14px}
-.table th{background:#f0f5fa}
-.advantage{display:flex;flex-wrap:wrap;margin:10px 0}
-.advantage span{background:#e6f1fc;color:#0a4978;padding:6px 12px;border-radius:4px;margin:0 8px 8px 0;font-size:14px}
-.gallery{margin-top:16px}
-.gallery img{width:100%;max-width:600px;height:auto;object-fit:cover;border-radius:6px}
-/* Request区域改白色背景 */
+
+/* 首页独有：工厂背景大图（无蓝色遮挡） */
+.hero {
+  background: url("https://raw.githubusercontent.com/xiangdongouyang/xiangdongouyang.github.io/main/Factory.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 85vh;
+  min-height: 600px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  text-align:center;
+  padding:0 20px;
+  position: relative;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  z-index: 0;
+}
+.hero h1, .hero p, .hero .cta-btn {
+  position: relative;
+  z-index: 1;
+}
+.hero h1 {
+  font-size:46px;
+  font-weight:700;
+  margin-bottom:20px;
+  letter-spacing:0.5px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+.hero p {
+  font-size:22px;
+  margin-bottom:35px;
+  max-width:850px;
+  font-weight:400;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+.cta-btn {
+  background:#ff6b00;
+  color:white;
+  padding:14px 36px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:16px;
+  transition:0.3s;
+}
+.cta-btn:hover{background:#e05a00}
+
+/* 页面通用布局 */
+.wrap{max-width:1100px;margin:0 auto;padding:40px 20px}
+.section{background:white;border-radius:10px;padding:35px;margin-bottom:30px;box-shadow:0 3px 12px rgba(0,0,0,0.05)}
+h2{color:#0a4978;font-size:26px;font-weight:600;margin-bottom:20px;border-left:4px solid #ff6b00;padding-left:14px}
+h3{color:#0a4978;font-size:20px;font-weight:600;margin:20px 0 12px}
+p{margin-bottom:15px;color:#333;font-size:16px}
+ul{padding-left:22px;margin-bottom:15px}
+li{margin-bottom:8px;font-size:16px}
+
+/* 首页独有：6个核心能力卡片 */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:24px;margin-top:25px}
+.card{background:white;border-radius:10px;padding:24px;box-shadow:0 3px 12px rgba(0,0,0,0.05)}
+.card img{
+  width:100%;
+  height:180px;
+  object-fit: contain;
+  border-radius:8px;
+  margin-bottom:16px;
+  background:#f5f5f5;
+}
+.card h3{margin-top:0}
+.card a{display:inline-block;margin-top:12px;color:#0a4978;font-weight:600}
+
+/* 底部Request区域白色背景（和分页面统一） */
 .contact{
   background:#ffffff;
   color:#222;
   text-align:center;
-  padding:30px 20px;
-  border-radius:8px;
-  margin-top:20px;
-  box-shadow:0 2px 8px rgba(0,0,0,0.06);
+  padding:40px 20px;
+  border-radius:10px;
+  margin-top:25px;
+  box-shadow:0 3px 12px rgba(0,0,0,0.05);
 }
 .contact h2{
   color:#0a4978;
-  border-left:none;
+  border:none;
   padding-left:0;
 }
 .contact a{
   color:#ff6b00;
-  font-weight:bold;
-  font-size:16px;
+  font-weight:600;
+  font-size:17px;
 }
 </style>
 </head>
+
 <body>
 
 <div class="navbar">
@@ -67,59 +137,92 @@ li{margin-bottom:6px}
   </div>
 </div>
 
+<!-- 首页独有：Hero区域 -->
+<div class="hero">
+  <h1>One-Stop Precision Manufacturing Solution</h1>
+  <p>CNC Machining • Friction Welding • Airtight Test • Sheet Metal • Die Casting • Injection Molding</p>
+  <a href="contact.html" class="cta-btn">Request a Quote</a>
+</div>
+
 <div class="wrap">
+
+<!-- 首页独有：About Us区域 -->
 <div class="section">
-  <h2>CNC Machining (Aluminum Focus)</h2>
-  <p>We specialize in high-precision CNC milling and turning for aluminum alloys (6061, 5052, 7075). Our advanced equipment and experienced engineers ensure the highest quality and dimensional accuracy for complex structural parts, thin-wall components, and high-demand functional parts.</p>
-  
-  <h3>Advantages</h3>
-  <div class="advantage">
-    <span>±0.01mm precision</span>
-    <span>Thin-wall anti-deformation</span>
-    <span>Multi-axis machining</span>
-    <span>DFM analysis</span>
-    <span>Fast turnaround</span>
-    <span>Small & mass production</span>
+  <h2>About Us</h2>
+  <p>X.d Prototype Fabrication is a professional precision manufacturing service provider focused on prototypes and small-batch production. We specialize in aluminum CNC machining, friction welding, air tightness testing, and sheet metal fabrication.</p>
+  <p>With professional mechanical design and machining experience, we understand drawings, process requirements and industry pain points. We provide DFM optimization, quality control and reliable solutions for our global customers.</p>
+</div>
+
+<!-- 首页独有：6个核心能力卡片区域 -->
+<div class="section">
+  <h2>Our Core Capabilities</h2>
+  <div class="card-grid">
+
+    <div class="card">
+      <img src="https://raw.githubusercontent.com/xiangdongouyang/xiangdongouyang.github.io/main/CNC.png" alt="CNC Machining">
+      <h3>CNC Machining</h3>
+      <p>High-precision CNC milling & turning for aluminum alloys. Complex structural parts & thin-wall components.</p>
+      <a href="cnc-machining.html">Learn More →</a>
+    </div>
+
+    <div class="card">
+      <img src="https://raw.githubusercontent.com/xiangdongouyang/xiangdongouyang.github.io/main/FSW2.png" alt="Friction Welding">
+      <h3>Friction Welding</h3>
+      <p>High-strength, airtight welding for aluminum assemblies. No porosity, ideal for pressure components.</p>
+      <a href="friction-welding.html">Learn More →</a>
+    </div>
+
+    <div class="card">
+      <img src="https://raw.githubusercontent.com/xiangdongouyang/xiangdongouyang.github.io/main/Leakage.png" alt="Airtight Testing">
+      <h3>Airtight Testing</h3>
+      <p>100% air tightness inspection for critical components. Pressure decay test to ensure zero leakage.</p>
+      <a href="airtight-test.html">Learn More →</a>
+    </div>
+
+    <div class="card">
+      <img src="https://raw.githubusercontent.com/xiangdongouyang/xiangdongouyang.github.io/main/Sheet%20metal.png" alt="Sheet Metal">
+      <h3>Sheet Metal</h3>
+      <p>Bending, laser cutting, stamping. Springback compensation ensures high accuracy.</p>
+      <a href="sheet-metal.html">Learn More →</a>
+    </div>
+
+    <div class="card">
+      <img src="https://raw.githubusercontent.com/xiangdongouyang/xiangdongouyang.github.io/main/Die%20casting.png" alt="Die Casting">
+      <h3>Die Casting</h3>
+      <p>High-efficiency mass production for complex aluminum parts with stable dimension.</p>
+      <a href="die-casting.html">Learn More →</a>
+    </div>
+
+    <div class="card">
+      <img src="https://raw.githubusercontent.com/xiangdongouyang/xiangdongouyang.github.io/main/Plastic.png" alt="Injection Molding">
+      <h3>Injection Molding</h3>
+      <p>Rapid & production molding for plastic parts with various materials available.</p>
+      <a href="injection-molding.html">Learn More →</a>
+    </div>
+
   </div>
+</div>
 
-  <h3>Capabilities</h3>
+<!-- 首页独有：Why Choose Us区域 -->
+<div class="section">
+  <h2>Why Choose Us</h2>
   <ul>
-    <li>3-axis, 4-axis, 5-axis CNC milling</li>
-    <li>CNC turning & lathe machining</li>
-    <li>High-speed machining for aluminum</li>
-    <li>Complex surface machining</li>
-    <li>Thread machining & tapping</li>
+    <li>Professional DFM analysis before production</li>
+    <li>Strict quality control & full inspection</li>
+    <li>One-stop service: machining, welding, casting, molding, finishing, testing</li>
+    <li>Fast quotation & reply within 24 hours</li>
+    <li>Professional English technical support</li>
+    <li>PPAP, inspection report & material certification</li>
   </ul>
-
-  <h3>Technical Information</h3>
-  <table class="table">
-    <tr><th>Item</th><th>Detail</th></tr>
-    <tr><td>Materials</td><td>Aluminum 6061, 5052, 7075; Stainless Steel; Steel; Brass</td></tr>
-    <tr><td>Minimum Tolerance</td><td>±0.01mm</td></tr>
-    <tr><td>Maximum Part Size</td><td>500mm x 400mm x 300mm</td></tr>
-    <tr><td>MOQ</td><td>1 piece (prototype)</td></tr>
-    <tr><td>Lead Time</td><td>3-7 days (prototype), 1-2 weeks (production)</td></tr>
-    <tr><td>Quality Assurance</td><td>DFM Analysis, Full Dimensional Inspection, Material Certification</td></tr>
-  </table>
-
-  <h3>Industry Pain Points & Solutions</h3>
-  <ul>
-    <li><strong>Thin-Wall Deformation:</strong> Special tool paths, low clamping force fixtures, and stable machining strategies</li>
-    <li><strong>Thread Binding After Surface Treatment:</strong> Pre-compensate thread size before anodizing/plating</li>
-    <li><strong>Dimensional Inaccuracy:</strong> In-process inspection and temperature control</li>
-  </ul>
-
-  <h3>Project Gallery</h3>
-  <div class="gallery">
-    <img src="https://raw.githubusercontent.com/xiangdongouyang/xiangdongouyang.github.io/main/CNC.png" alt="CNC Machined Parts">
-  </div>
 </div>
 
 <div class="contact">
   <h2>Request a Quote</h2>
-  <p>Send your CNC machining drawings for DFM analysis and quotation.</p>
+  <p style="margin-bottom:10px">Send 2D / 3D drawings (STEP, DWG, PDF) to get professional DFM & quotation.</p>
   <p>Email: <a href="mailto:xiangdongouyang001@gmail.com">xiangdongouyang001@gmail.com</a></p>
+  <p style="margin-top:10px;font-size:14px">We reply within 24 hours.</p>
 </div>
+
 </div>
 </body>
 </html>
