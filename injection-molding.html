@@ -5,41 +5,105 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Injection Molding | X.d Prototype Fabrication</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,Roboto,sans-serif}
-.navbar{background:#0a4978;color:white;padding:15px 0;position:sticky;top:0}
-.nav-wrap{max-width:1000px;margin:0 auto;padding:0 20px;display:flex;gap:20px}
-.nav-links a{color:white;text-decoration:none}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',system-ui,Segoe UI,Roboto,sans-serif}
+body{background:#f7f8fa;color:#222;line-height:1.7}
+.navbar{background:#ffffff;color:#0a4978;padding:15px 0;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
+.nav-wrap{max-width:1000px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:20px;font-weight:700;color:#0a4978}
+.nav-links{display:flex;gap:20px}
+.nav-links a{color:#0a4978;text-decoration:none;font-size:14px;font-weight:500}
+.nav-links a:hover{color:#ff6b00}
 .wrap{max-width:1000px;margin:0 auto;padding:30px 20px}
-.section{background:white;border-radius:8px;padding:28px;margin:20px 0;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
-h2{border-left:4px solid #ff6b00;padding-left:12px;color:#0a4978}
-.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:15px}
-.gallery img{width:100%;height:140px;object-fit:cover;border-radius:6px}
-.contact{background:#0a4978;color:white;text-align:center;padding:20px;border-radius:8px}
-.contact a{color:#ff6b00}
+.section{background:white;border-radius:8px;padding:28px;margin-bottom:24px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+h2{color:#0a4978;font-size:22px;font-weight:600;margin-bottom:16px;border-left:4px solid #ff6b00;padding-left:12px}
+h3{color:#0a4978;font-size:18px;font-weight:600;margin:18px 0 10px}
+p{margin-bottom:12px;color:#333}
+ul{padding-left:20px;margin-bottom:12px}
+li{margin-bottom:6px}
+.table{width:100%;border-collapse:collapse;margin:16px 0}
+.table th,.table td{border:1px solid #ddd;padding:10px;text-align:left;font-size:14px}
+.table th{background:#f0f5fa}
+.advantage{display:flex;flex-wrap:wrap;margin:10px 0}
+.advantage span{background:#e6f1fc;color:#0a4978;padding:6px 12px;border-radius:4px;margin:0 8px 8px 0;font-size:14px}
+.gallery{margin-top:16px}
+.gallery img{width:100%;max-width:600px;height:auto;object-fit:cover;border-radius:6px}
+.contact{background:#0a4978;color:white;text-align:center;padding:30px 20px;border-radius:8px;margin-top:20px}
+.contact h2{color:white;border-left:none;padding-left:0}
+.contact a{color:#ff6b00;font-weight:bold;font-size:16px}
 </style>
 </head>
 <body>
-<div class="navbar"><div class="nav-wrap"><div class="nav-links">
-<a href="index.html">Home</a>
-<a href="cnc-machining.html">CNC</a>
-<a href="friction-welding.html">Welding</a>
-<a href="airtight-test.html">Airtight</a>
-<a href="sheet-metal.html">Sheet Metal</a>
-<a href="die-casting.html">Die Casting</a>
-<a href="injection-molding.html">Injection</a>
-<a href="contact.html">Contact</a>
-</div></div></div>
+
+<div class="navbar">
+  <div class="nav-wrap">
+    <div class="logo">X.d Prototype Fabrication</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="cnc-machining.html">CNC Machining</a>
+      <a href="friction-welding.html">Friction Welding</a>
+      <a href="airtight-test.html">Airtight Test</a>
+      <a href="sheet-metal.html">Sheet Metal</a>
+      <a href="die-casting.html">Die Casting</a>
+      <a href="injection-molding.html">Injection Molding</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</div>
+
 <div class="wrap">
 <div class="section">
-<h2>Injection Molding</h2>
-<p>Rapid prototyping and mass production for plastic parts.</p>
-<div class="gallery">
-<img src="https://raw.githubusercontent.com/xiangdongouyang/xiangdongouyang.github.io/main/Plastic.png" alt="Plastic Injection">
-<img src="https://raw.githubusercontent.com/xiangdongouyang/xiangdongouyang.github.io/main/Plastic.png" alt="Plastic Parts">
+  <h2>Plastic Injection Molding</h2>
+  <p>We offer rapid prototyping and production injection molding services for plastic parts. From prototype tooling to mass production, we provide high-quality, cost-effective solutions for various industries including automotive, medical, and consumer electronics.</p>
+  
+  <h3>Advantages</h3>
+  <div class="advantage">
+    <span>Rapid prototype tooling</span>
+    <span>High precision molding</span>
+    <span>Wide material selection</span>
+    <span>Low cost for mass production</span>
+    <span>Fast turnaround time</span>
+    <span>Integrated assembly service</span>
+  </div>
+
+  <h3>Capabilities</h3>
+  <ul>
+    <li>Prototype injection molding (soft tooling)</li>
+    <li>Production injection molding (hard tooling)</li>
+    <li>Overmolding & insert molding</li>
+    <li>Two-shot injection molding</li>
+    <li>Mold design & manufacturing</li>
+    <li>Surface finishing (painting, silk screening)</li>
+  </ul>
+
+  <h3>Technical Information</h3>
+  <table class="table">
+    <tr><th>Item</th><th>Detail</th></tr>
+    <tr><td>Materials</td><td>ABS, PC, PP, PE, PA6, PA66, POM, PMMA, TPE, TPU</td></tr>
+    <tr><td>Minimum Tolerance</td><td>±0.05mm</td></tr>
+    <tr><td>Maximum Part Weight</td><td>2kg</td></tr>
+    <tr><td>Maximum Part Size</td><td>300mm x 200mm x 150mm</td></tr>
+    <tr><td>MOQ</td><td>50 pieces (prototype), 1000 pieces (production)</td></tr>
+    <tr><td>Lead Time</td><td>7-10 days (prototype), 20-25 days (production)</td></tr>
+    <tr><td>Quality Assurance</td><td>Full dimensional inspection, material certification, functional testing</td></tr>
+  </table>
+
+  <h3>Industry Pain Points & Solutions</h3>
+  <ul>
+    <li><strong>Warpage & Shrinkage:</strong> Mold flow analysis and optimized cooling system design</li>
+    <li><strong>Flash & Sink Marks:</strong> Precision mold manufacturing and controlled injection parameters</li>
+    <li><strong>Material Degradation:</strong> Strict temperature control and proper drying process</li>
+  </ul>
+
+  <h3>Project Gallery</h3>
+  <div class="gallery">
+    <img src="https://raw.githubusercontent.com/xiangdongouyang/xiangdongouyang.github.io/main/Plastic.png" alt="Plastic Injection Molding Parts">
+  </div>
 </div>
-</div>
+
 <div class="contact">
-<p>Email: <a href="mailto:xiangdongouyang001@gmail.com">xiangdongouyang001@gmail.com</a></p>
+  <h2>Request a Quote</h2>
+  <p>Send your injection molding drawings for mold design and quotation.</p>
+  <p>Email: <a href="mailto:xiangdongouyang001@gmail.com">xiangdongouyang001@gmail.com</a></p>
 </div>
 </div>
 </body>
