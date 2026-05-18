@@ -4,15 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>X.d Prototype Fabrication | Precision Manufacturing</title>
-
-<!-- 👇 新增：设置网站图标 -->
 <link rel="icon" href="XDLOGO.png" type="image/png">
-
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',system-ui,Segoe UI,Roboto,sans-serif}
 body{background:#f7f8fa;color:#222;line-height:1.8}
 
-/* 导航栏白色主题（和分页面完全统一） */
+/* 导航栏白色主题 */
 .navbar{background:#ffffff;color:#0a4978;padding:18px 0;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
 .nav-wrap{max-width:1100px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
 .logo{font-size:22px;font-weight:700;color:#0a4978}
@@ -20,7 +17,17 @@ body{background:#f7f8fa;color:#222;line-height:1.8}
 .nav-links a{color:#0a4978;text-decoration:none;font-size:15px;font-weight:500}
 .nav-links a:hover{color:#ff6b00}
 
-/* 首页独有：工厂背景大图（无蓝色遮挡） */
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .logo {
+    font-size: 18px;
+  }
+}
+
+/* 首页背景大图，去掉多余文字 */
 .hero {
   background: url("Factory.png");
   background-size: cover;
@@ -47,35 +54,20 @@ body{background:#f7f8fa;color:#222;line-height:1.8}
   background: rgba(0,0,0,0.3);
   z-index: 0;
 }
-.hero h1, .hero p, .hero .cta-btn {
+/* 去掉标题和描述文字，只保留按钮 */
+.hero .cta-btn {
   position: relative;
   z-index: 1;
-}
-.hero h1 {
-  font-size:46px;
-  font-weight:700;
-  margin-bottom:20px;
-  letter-spacing:0.5px;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-}
-.hero p {
-  font-size:22px;
-  margin-bottom:35px;
-  max-width:850px;
-  font-weight:400;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-}
-.cta-btn {
   background:#ff6b00;
   color:white;
-  padding:14px 36px;
+  padding:16px 40px;
   border-radius:6px;
   text-decoration:none;
   font-weight:600;
-  font-size:16px;
+  font-size:18px;
   transition:0.3s;
 }
-.cta-btn:hover{background:#e05a00}
+.hero .cta-btn:hover{background:#e05a00}
 
 /* 页面通用布局 */
 .wrap{max-width:1100px;margin:0 auto;padding:40px 20px}
@@ -86,7 +78,7 @@ p{margin-bottom:15px;color:#333;font-size:16px}
 ul{padding-left:22px;margin-bottom:15px}
 li{margin-bottom:8px;font-size:16px}
 
-/* 首页独有：6个核心能力卡片 */
+/* 核心能力卡片 */
 .card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:24px;margin-top:25px}
 .card{background:white;border-radius:10px;padding:24px;box-shadow:0 3px 12px rgba(0,0,0,0.05)}
 .card img{
@@ -100,7 +92,7 @@ li{margin-bottom:8px;font-size:16px}
 .card h3{margin-top:0}
 .card a{display:inline-block;margin-top:12px;color:#0a4978;font-weight:600}
 
-/* 底部Request区域白色背景（和分页面统一） */
+/* 底部Request区域 */
 .contact{
   background:#ffffff;
   color:#222;
@@ -141,23 +133,19 @@ li{margin-bottom:8px;font-size:16px}
   </div>
 </div>
 
-<!-- 首页独有：Hero区域 -->
+<!-- 去掉了标题和描述，只保留Request按钮 -->
 <div class="hero">
-  <h1>One-Stop Precision Manufacturing Solution</h1>
-  <p>CNC Machining • Friction Welding • Airtight Test • Sheet Metal • Die Casting • Injection Molding</p>
   <a href="contact.html" class="cta-btn">Request a Quote</a>
 </div>
 
 <div class="wrap">
 
-<!-- 首页独有：About Us区域 -->
 <div class="section">
   <h2>About Us</h2>
   <p>X.d Prototype Fabrication is a professional precision manufacturing service provider focused on prototypes and small-batch production. We specialize in aluminum CNC machining, friction welding, air tightness testing, and sheet metal fabrication.</p>
   <p>With professional mechanical design and machining experience, we understand drawings, process requirements and industry pain points. We provide DFM optimization, quality control and reliable solutions for our global customers.</p>
 </div>
 
-<!-- 首页独有：6个核心能力卡片区域 -->
 <div class="section">
   <h2>Our Core Capabilities</h2>
   <div class="card-grid">
@@ -207,7 +195,6 @@ li{margin-bottom:8px;font-size:16px}
   </div>
 </div>
 
-<!-- 首页独有：Why Choose Us区域 -->
 <div class="section">
   <h2>Why Choose Us</h2>
   <ul>
