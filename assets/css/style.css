@@ -434,3 +434,12 @@ body.nav-open .burger span::after{top:0;transform:rotate(-45deg)}
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.001ms !important;transition-duration:.001ms !important;scroll-behavior:auto !important}
 }
+
+/* fixture gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:1200px;margin:0 auto}
+.gal-item{margin:0;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 1px 3px rgba(16,32,64,.06);transition:transform .2s ease,box-shadow .2s ease}
+.gal-item:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(16,32,64,.12)}
+.gal-item img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.gal-item figcaption{padding:11px 14px;font-size:13.5px;line-height:1.45;color:var(--navy);font-weight:600}
+@media(max-width:1000px){.gal{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.gal{grid-template-columns:1fr}}
